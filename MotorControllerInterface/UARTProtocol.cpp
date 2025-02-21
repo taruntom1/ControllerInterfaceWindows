@@ -39,6 +39,7 @@ void UARTProtocol::sendCommand(uint8_t command) {
     uint8_t commandArr[2] = { config.header, command };
     DWORD bytesWritten;
     WriteFile(hSerial, commandArr, 2, &bytesWritten, nullptr);
+    PurgeComm(hSerial, PURGE_RXCLEAR);
 }
 
 void UARTProtocol::sendData(const uint8_t* data, size_t length) {
