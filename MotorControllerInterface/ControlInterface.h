@@ -22,6 +22,7 @@ public:
     bool GetMotorData(uint8_t motorID);
     bool SetControllerProperties();
     bool GetControllerProperties();
+    bool SetMotorControlMode();
 
     bool SetPIDConstants(uint8_t motorID, uint8_t PIDtype);
 
@@ -29,7 +30,7 @@ public:
     void SetMotorAngleSetpoints();
     void SetMotorPWMs();
 
-    bool SetOdoBroadcastStatus();
+    bool SetOdoBroadcastStatus(uint8_t motor_id);
     bool RecieveOdoSpeeds();
     bool RecieveOdoAngles();
 

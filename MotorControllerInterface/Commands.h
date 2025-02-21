@@ -1,6 +1,6 @@
-#pragma once
 #ifndef COMMANDS_H
 #define COMMANDS_H
+#include <stdint.h>
 
 const uint8_t PING = 0x01;
 const uint8_t READ_SUCCESS = 0x02;
@@ -24,11 +24,12 @@ const uint8_t SET_MOTOR_SPEED_SETPOINTS = 0x42;
 const uint8_t GET_MOTOR_SPEED = 0x43;
 const uint8_t SET_MOTOR_ANGLE_SETPOINTS = 0x44;
 const uint8_t GET_MOTOR_ANGLE = 0x45;
+const uint8_t SET_MOTOR_CONTROL_MODES = 0x46;
+const uint8_t GET_MOTOR_CONTROL_MODES = 0x47;
 
 const uint8_t SET_ODO_BROADCAST_STATUS = 0X60;
 const uint8_t SEND_ODO_SPEEDS = 0x65;
 const uint8_t SEND_ODO_ANGLES = 0x66;
 const uint8_t SEND_ODO_PWMS = 0x67;
-
 
 #endif // COMMANDS_H
